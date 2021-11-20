@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Topify</title>
+        <meta name="description" content="Your top song and genres of spotify." />
+
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+        <!-- Style -->
+        <link rel="stylesheet" href="/css/normalize.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="/js/config.js"></script>
+        <script src="/js/spotifyClient.js"></script>
+        <script src="/js/app.js"></script>
+    </head>
+    <body>
+        <header class="o-row o-row--nav">
+            <div class="o-container">
+                <div class="c-header">
+                    <div class="c-header__logo">
+                        <h1 class="c-logo">Topify</h1>
+                    </div>
+                    <div class="c-header__buttons">
+                        <p><button class="o-button-reset c-link-cta js-logout">logout</button></p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="o-row o-row--hero">
+            <div class="c-hero">
+                <div class="c-hero__content">
+                    <h2 class="c-lead c-lead--xl">What's your favorite music?</h2>
+                    <p><a class="c-link-cta" href="/#top">Discover</a></p>
+                </div>
+            </div>
+        </section>
+        <section id="top" class="o-row o-row--xl">
+            <div class="o-container">
+                <div class="o-section o-section--xl">
+                    <div class="o-layout o-layout--gutter-lg o-layout--align-center">
+                        <div class="o-layout__item u-1-of-2-bp3">
+                            <h3 class="u-text-center-bp3">What are your top 10 songs?</h3>
+                        </div>
+                        <div class="o-layout__item u-1-of-2-bp3">
+                            <ul class="o-list js-top-songs"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="o-section o-section--xl">
+                    <div class="o-layout o-layout--gutter o-layout--align-center o-layout--row-reverse">
+                        <div class="o-layout__item u-1-of-2-bp3">
+                            <h3 class="u-text-center-bp3">What are your top 10 genres?</h3>
+                        </div>
+                        <div class="o-layout__item u-1-of-2-bp3">
+                            <ul class="o-list js-top-genres"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
