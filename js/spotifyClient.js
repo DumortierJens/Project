@@ -68,7 +68,7 @@ class SpotifyClient {
     async login() {
         const refreshToken = window.sessionStorage.getItem('refreshToken');
 
-        if ((refreshToken != null) && (typeof (refreshToken) != "undefined"))
+        if ((refreshToken != null) && (refreshToken != "undefined"))
             this.accessToken = await this._getAuthTokenByRefreshToken(refreshToken);
         else
             this.accessToken = await this._getAuthTokenByAuthCode();
