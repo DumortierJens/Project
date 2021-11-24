@@ -11,7 +11,7 @@ const showSongs = async function (spotifyClient) {
         let songArtists = ``;
         for (let artist of song.artists)
             songArtists += artist.name + ', ';
-        songArtists = songArtists.slice(0, -3);
+        songArtists = songArtists.slice(0, -2);
 
         htmlSongs += `<li class="c-song">
                 <audio class="js-preview-${songId}" src="${songPreview == null ? '' : songPreview}"></audio>
